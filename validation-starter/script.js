@@ -73,7 +73,11 @@ function validateForm() {
     !validateEmail ||
     !validateMessage
   ) {
+    submitErorr.style.display = "block";
     submitErorr.innerHTML = "Please fill all the required fields";
+    setTimeout(() => {
+      submitErorr.style.display = "none";
+    }, 3000);
     return false;
   }
 }
